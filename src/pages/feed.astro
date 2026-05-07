@@ -1,0 +1,27 @@
+---
+import LaunchLayout from '@/layouts/LaunchLayout.astro';
+import { FeedNav } from '@/components/feed/FeedNav';
+import { FeedHero } from '@/components/feed/FeedHero';
+import { TopicPicker } from '@/components/feed/TopicPicker';
+import { FeaturedPost } from '@/components/feed/FeaturedPost';
+import { TheFeed } from '@/components/feed/TheFeed';
+import { FeedVoices } from '@/components/feed/FeedVoices';
+import { AlgorithmManifesto } from '@/components/feed/AlgorithmManifesto';
+import { FeedSubscribe } from '@/components/feed/FeedSubscribe';
+import { LaunchFooter } from '@/components/launch/LaunchFooter';
+---
+
+<LaunchLayout title="Kernel Feed — Your distilled tech community">
+  <div class="grain" aria-hidden="true"></div>
+  <FeedNav client:load />
+  <main class="relative">
+    <FeedHero client:load />
+    <TopicPicker client:visible />
+    <FeaturedPost client:visible />
+    <TheFeed client:visible />
+    <FeedVoices client:visible />
+    <AlgorithmManifesto client:visible />
+    <FeedSubscribe client:visible />
+  </main>
+  <LaunchFooter />
+</LaunchLayout>
