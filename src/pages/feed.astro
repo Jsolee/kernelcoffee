@@ -8,6 +8,13 @@ import { TheFeed } from '@/components/feed/TheFeed';
 import { FeedVoices } from '@/components/feed/FeedVoices';
 import { AlgorithmManifesto } from '@/components/feed/AlgorithmManifesto';
 import { FeedSubscribe } from '@/components/feed/FeedSubscribe';
+import { StickySubscribeBar } from '@/components/feed/StickySubscribeBar';
+import { MidSubscribeCTA } from '@/components/feed/MidSubscribeCTA';
+import { KernelDiscord } from '@/components/feed/KernelDiscord';
+import { KernelReferrals } from '@/components/feed/KernelReferrals';
+import { KernelKnowledge } from '@/components/feed/KernelKnowledge';
+import { KernelGamification } from '@/components/feed/KernelGamification';
+import { KernelCronUpgrade } from '@/components/feed/KernelCronUpgrade';
 import { LaunchFooter } from '@/components/launch/LaunchFooter';
 ---
 
@@ -19,9 +26,16 @@ import { LaunchFooter } from '@/components/launch/LaunchFooter';
     <TopicPicker client:visible />
     <FeaturedPost client:visible />
     <TheFeed client:visible />
+    <MidSubscribeCTA client:visible />
+    <KernelDiscord client:visible />
+    <KernelReferrals client:visible />
+    <KernelKnowledge client:visible />
+    <KernelGamification client:visible />
     <FeedVoices client:visible />
     <AlgorithmManifesto client:visible />
+    <KernelCronUpgrade client:visible />
     <FeedSubscribe client:visible />
   </main>
+  <StickySubscribeBar client:idle />
   <LaunchFooter />
 </LaunchLayout>

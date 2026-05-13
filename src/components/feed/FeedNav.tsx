@@ -64,18 +64,21 @@ export function FeedNav() {
           </span>
         </a>
 
-        <div className="hidden md:flex items-center gap-8 font-mono text-[12px] tracking-[0.18em] uppercase text-muted-foreground">
-          <a href="#topics" className="hover:text-foreground transition-colors">
-            Topics
-          </a>
+        <div className="hidden md:flex items-center gap-6 lg:gap-7 font-mono text-[12px] tracking-[0.18em] uppercase text-muted-foreground">
           <a href="#feed" className="hover:text-foreground transition-colors">
             Feed
           </a>
-          <a href="#voices" className="hover:text-foreground transition-colors">
-            Voices
+          <a href="#discord" className="hover:text-foreground transition-colors">
+            Discord
           </a>
-          <a href="#algorithm" className="hover:text-foreground transition-colors">
-            Algorithm
+          <a href="#knowledge" className="hover:text-foreground transition-colors">
+            Talks
+          </a>
+          <a href="#gamification" className="hover:text-foreground transition-colors hidden lg:inline">
+            Ranks
+          </a>
+          <a href="#cron" className="hover:text-foreground transition-colors">
+            Cron
           </a>
         </div>
 
@@ -86,9 +89,16 @@ export function FeedNav() {
           </div>
           <a
             href="#subscribe"
-            className="group inline-flex items-center gap-2 rounded-full bg-foreground text-background px-4 py-2 font-mono text-[11px] tracking-[0.2em] uppercase hover:bg-primary hover:text-primary-foreground transition-colors"
+            className="group relative inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-4 py-2 font-mono text-[11px] tracking-[0.2em] uppercase hover:bg-foreground hover:text-background transition-colors shadow-[0_0_0_0_hsl(var(--primary))] hover:shadow-[0_0_24px_2px_hsl(var(--primary)/0.4)]"
           >
-            Join community
+            <span className="relative flex h-1.5 w-1.5">
+              <span className="absolute inline-flex h-full w-full rounded-full bg-current opacity-60 animate-ping" />
+              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-current" />
+            </span>
+            Subscribe · Free
+            <svg width="12" height="12" viewBox="0 0 14 14" fill="none" className="transition-transform group-hover:translate-x-0.5">
+              <path d="M1 7h11m0 0L7 2m5 5l-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            </svg>
           </a>
         </div>
       </div>

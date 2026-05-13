@@ -158,18 +158,60 @@ export function FeedHero() {
           </h1>
         </div>
 
-        {/* Sub + tickers */}
-        <div className="mt-12 md:mt-16 grid md:grid-cols-12 gap-8 md:gap-12 items-end">
-          <p
-            data-h-fade
-            className="md:col-span-5 text-lg md:text-xl leading-relaxed text-muted-foreground max-w-md"
-          >
-            A blog distilled from the Kernel Community. Tech news, deep reads,
-            and signal from devs you'd want to share an espresso with —
-            re-ranked daily for the way <em>you</em> read.
-          </p>
+        {/* Sub + CTA */}
+        <div className="mt-12 md:mt-16 grid md:grid-cols-12 gap-8 md:gap-12 items-start">
+          <div className="md:col-span-6">
+            <p
+              data-h-fade
+              className="text-lg md:text-xl leading-relaxed text-muted-foreground max-w-md"
+            >
+              A blog distilled from the Kernel Community. Tech news, deep reads,
+              and signal from devs you'd want to share an espresso with —
+              re-ranked daily for the way <em>you</em> read.
+            </p>
 
-          <div className="md:col-span-7 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-6">
+            {/* Primary CTA — inline subscribe */}
+            <div data-h-fade className="mt-8 max-w-md">
+              <form
+                action="#subscribe"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  document.getElementById('subscribe')?.scrollIntoView({ behavior: 'smooth' });
+                  setTimeout(() => {
+                    const target = document.querySelector<HTMLInputElement>('#subscribe input[type=email]');
+                    if (target) target.focus();
+                  }, 700);
+                }}
+                className="flex items-center gap-2 rounded-full border border-foreground/30 bg-background/60 backdrop-blur-sm pl-5 pr-1.5 py-1.5 focus-within:border-foreground transition-colors"
+              >
+                <input
+                  type="email"
+                  required
+                  placeholder="you@domain.work"
+                  className="flex-1 bg-transparent py-2.5 text-base md:text-[15px] font-mono placeholder:text-muted-foreground/60 focus:outline-none"
+                />
+                <button
+                  type="submit"
+                  className="group/btn inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.22em] uppercase py-2.5 px-5 rounded-full bg-primary text-primary-foreground hover:bg-foreground hover:text-background transition-colors"
+                >
+                  Subscribe free
+                  <svg width="13" height="13" viewBox="0 0 14 14" fill="none" className="transition-transform group-hover/btn:translate-x-0.5">
+                    <path d="M1 7h11m0 0L7 2m5 5l-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                  </svg>
+                </button>
+              </form>
+              <div className="mt-3 flex items-center gap-3 font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground">
+                <div className="flex -space-x-1.5">
+                  {['bg-primary', 'bg-foreground', 'bg-amber-400/80', 'bg-rose-400/80'].map((c) => (
+                    <span key={c} className={`h-4 w-4 rounded-full ring-2 ring-background ${c}`} />
+                  ))}
+                </div>
+                <span>1,247 devs · 1 email/day · no ads</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="md:col-span-6 grid grid-cols-2 md:grid-cols-2 gap-x-6 gap-y-6">
             {META_TICKERS.map((t, i) => (
               <div key={t.label} data-h-ticker-row className="border-t border-border pt-3">
                 <div className="font-serif italic text-3xl md:text-4xl tracking-tight">

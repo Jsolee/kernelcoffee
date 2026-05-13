@@ -95,97 +95,118 @@ export function FeedSubscribe() {
       </div>
 
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-end">
-          <div className="lg:col-span-7">
-            <div data-sub-fade className="flex items-center gap-3 font-mono text-[11px] tracking-[0.22em] uppercase text-muted-foreground mb-8">
-              <span className="h-px w-10 bg-border" />
-              <span>§ Join the community</span>
-            </div>
+        {/* Top urgency banner */}
+        <div
+          data-sub-fade
+          className="mx-auto max-w-fit flex items-center gap-3 font-mono text-[11px] tracking-[0.22em] uppercase text-primary border border-primary/40 bg-primary/5 rounded-full px-4 py-2 mb-10"
+        >
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full rounded-full bg-primary opacity-60 animate-ping" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
+          </span>
+          Next issue ships in · 07:00 CET tomorrow
+        </div>
 
-            <h2
-              data-sub-fade
-              className="font-serif italic tracking-[-0.03em] leading-[1.02] text-[9vw] md:text-[68px] lg:text-[96px] max-w-[1100px]"
-            >
-              One email. <br />
-              <span className="text-primary">Four posts.</span> <br />
-              Zero noise.
-            </h2>
-
-            <p data-sub-fade className="mt-8 max-w-md text-base md:text-lg leading-relaxed text-muted-foreground">
-              The Kernel Wire goes out every morning at 07:00 CET. It's the same
-              feed you've been tuning, distilled to the four posts our desk
-              would actually open.
-            </p>
-
-            <ul className="mt-10 grid sm:grid-cols-2 gap-3 max-w-lg">
-              {PERKS.map((p) => (
-                <li
-                  key={p}
-                  data-sub-perk
-                  data-sub-fade
-                  className="flex items-start gap-3 font-mono text-[11px] tracking-[0.18em] uppercase text-muted-foreground"
-                >
-                  <span className="mt-1.5 h-1 w-4 bg-primary shrink-0" />
-                  <span>{p}</span>
-                </li>
-              ))}
-            </ul>
+        {/* Centered, louder headline */}
+        <div className="text-center max-w-[1180px] mx-auto">
+          <div data-sub-fade className="inline-flex items-center gap-3 font-mono text-[11px] tracking-[0.22em] uppercase text-muted-foreground mb-6">
+            <span className="h-px w-10 bg-border" />
+            <span>§ Subscribe to the Kernel Wire</span>
+            <span className="h-px w-10 bg-border" />
           </div>
 
-          <form
+          <h2
             data-sub-fade
-            onSubmit={onSubmit}
-            className="lg:col-span-5"
+            className="font-serif italic tracking-[-0.03em] leading-[1.02] text-[11vw] md:text-[88px] lg:text-[120px]"
           >
-            <label className="block font-mono text-[11px] tracking-[0.22em] uppercase text-muted-foreground mb-3">
-              {submitted ? '> Welcome to the Kernel desk' : 'Subscribe to the Wire'}
-            </label>
-            <div className="group relative flex items-center border-b border-border focus-within:border-foreground transition-colors">
+            One email. <br />
+            <span className="text-primary">Four posts.</span> <br />
+            Zero noise.
+          </h2>
+
+          <p data-sub-fade className="mt-8 max-w-xl mx-auto text-base md:text-lg leading-relaxed text-muted-foreground">
+            The Kernel Wire ships every morning at 07:00 CET — the same feed
+            you've been tuning, distilled to the four posts our desk would
+            actually open. <strong className="text-foreground">Join 1,247 developers</strong> already reading.
+          </p>
+        </div>
+
+        {/* The big form */}
+        <form
+          data-sub-fade
+          onSubmit={onSubmit}
+          className="mt-12 max-w-2xl mx-auto"
+        >
+          <div className="relative rounded-2xl border border-foreground/20 bg-background/70 backdrop-blur-md p-2 shadow-[0_24px_80px_-30px_hsl(var(--primary)/0.4)] focus-within:border-foreground transition-colors">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
               <input
                 type="email"
                 required
                 disabled={submitted}
                 placeholder="you@domain.work"
-                className="flex-1 bg-transparent py-4 pr-4 text-lg md:text-xl font-serif italic placeholder:text-muted-foreground/60 focus:outline-none disabled:opacity-60"
+                className="flex-1 bg-transparent px-5 py-4 text-lg md:text-xl font-serif italic placeholder:text-muted-foreground/60 focus:outline-none disabled:opacity-60"
               />
               <button
                 type="submit"
                 disabled={submitted}
-                className="group/btn inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.22em] uppercase py-3 px-5 rounded-full bg-foreground text-background hover:bg-primary hover:text-primary-foreground transition-colors disabled:opacity-60"
+                className="group/btn inline-flex items-center justify-center gap-2 font-mono text-[12px] tracking-[0.22em] uppercase py-4 px-7 rounded-xl bg-primary text-primary-foreground hover:bg-foreground hover:text-background transition-colors disabled:opacity-60 whitespace-nowrap"
               >
-                {submitted ? 'Confirmed' : 'Subscribe'}
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  fill="none"
-                  className="transition-transform group-hover/btn:translate-x-0.5"
-                >
-                  <path
-                    d="M1 7h11m0 0L7 2m5 5l-5 5"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                  />
-                </svg>
+                {submitted ? '✓ Confirmed' : 'Subscribe free →'}
               </button>
             </div>
-            <p className="mt-3 font-mono text-[11px] tracking-[0.18em] uppercase text-muted-foreground/80">
-              {submitted
-                ? '> Confirmation sent · check your inbox at 07:00 CET'
-                : 'Free · unsubscribe in one click · 1,247 readers'}
-            </p>
+          </div>
+          <p className="mt-4 text-center font-mono text-[11px] tracking-[0.18em] uppercase text-muted-foreground/80">
+            {submitted
+              ? '> Confirmation sent · check your inbox at 07:00 CET'
+              : '100% free · unsubscribe in one click · no spam ever'}
+          </p>
 
-            {/* receipt-style confirmation */}
-            {submitted && (
-              <div className="mt-8 rounded-md border border-border/70 bg-background/40 p-5 font-mono text-[11px] tracking-[0.16em] uppercase text-muted-foreground space-y-1">
-                <div className="flex justify-between"><span>Status</span><span className="text-primary">Confirmed</span></div>
-                <div className="flex justify-between"><span>Profile</span><span>0xKERNEL · demo</span></div>
-                <div className="flex justify-between"><span>Topics</span><span>AI · Frontend · Tech</span></div>
-                <div className="flex justify-between"><span>First issue</span><span>Tomorrow · 07:00</span></div>
-              </div>
-            )}
-          </form>
+          {/* receipt-style confirmation */}
+          {submitted && (
+            <div className="mt-8 max-w-md mx-auto rounded-md border border-border/70 bg-background/40 p-5 font-mono text-[11px] tracking-[0.16em] uppercase text-muted-foreground space-y-1">
+              <div className="flex justify-between"><span>Status</span><span className="text-primary">Confirmed</span></div>
+              <div className="flex justify-between"><span>Profile</span><span>0xKERNEL · demo</span></div>
+              <div className="flex justify-between"><span>Topics</span><span>AI · Frontend · Tech</span></div>
+              <div className="flex justify-between"><span>First issue</span><span>Tomorrow · 07:00</span></div>
+            </div>
+          )}
+        </form>
+
+        {/* Perks grid */}
+        <ul className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-5 max-w-4xl mx-auto">
+          {PERKS.map((p) => (
+            <li
+              key={p}
+              data-sub-perk
+              data-sub-fade
+              className="rounded-xl border border-border/60 bg-background/40 p-5 flex items-start gap-3 font-mono text-[11px] tracking-[0.18em] uppercase text-muted-foreground hover:border-foreground/40 transition-colors"
+            >
+              <span className="mt-0.5 h-2 w-2 rounded-full bg-primary shrink-0" />
+              <span>{p}</span>
+            </li>
+          ))}
+        </ul>
+
+        {/* Social proof */}
+        <div data-sub-fade className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 font-mono text-[11px] tracking-[0.22em] uppercase text-muted-foreground">
+          <div className="flex items-center gap-3">
+            <div className="flex -space-x-2">
+              {['bg-primary', 'bg-foreground', 'bg-amber-400/80', 'bg-rose-400/80', 'bg-sky-400/80'].map((c) => (
+                <span key={c} className={`h-7 w-7 rounded-full ring-2 ring-background ${c}`} />
+              ))}
+            </div>
+            <span>1,247 devs reading</span>
+          </div>
+          <span className="hidden sm:inline text-border">|</span>
+          <div className="flex items-center gap-2">
+            <span className="text-primary">★★★★★</span>
+            <span>4.9 · 312 ratings</span>
+          </div>
+          <span className="hidden sm:inline text-border">|</span>
+          <div className="flex items-center gap-2">
+            <span className="text-primary">●</span>
+            <span>Open rate · 76%</span>
+          </div>
         </div>
       </div>
     </section>
