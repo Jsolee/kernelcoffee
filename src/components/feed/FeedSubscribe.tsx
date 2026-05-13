@@ -117,7 +117,7 @@ export function FeedSubscribe() {
 
           <h2
             data-sub-fade
-            className="font-serif italic tracking-[-0.03em] leading-[1.02] text-[11vw] md:text-[88px] lg:text-[120px]"
+            className="font-serif italic tracking-[-0.03em] leading-[1.06] text-[11vw] md:text-[88px] lg:text-[120px] pb-[0.05em]"
           >
             One email. <br />
             <span className="text-primary">Four posts.</span> <br />

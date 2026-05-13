@@ -152,16 +152,16 @@ export const rank = (post: Post, you: Profile) => {
           ref={headlineRef}
           className="font-serif italic tracking-[-0.03em] leading-[1.02] text-[9vw] md:text-[72px] lg:text-[100px] max-w-[1180px]"
         >
-          <span data-algo-line className="block overflow-hidden">
+          <span data-algo-line className="block overflow-hidden pb-[0.18em] -mb-[0.10em]">
             <span data-algo-word className="inline-block mr-[0.10em] will-change-transform">No</span>
             <span data-algo-word className="inline-block mr-[0.10em] will-change-transform">engagement</span>
             <span data-algo-word className="inline-block mr-[0.10em] will-change-transform">bait.</span>
           </span>
-          <span data-algo-line className="block overflow-hidden">
+          <span data-algo-line className="block overflow-hidden pb-[0.18em] -mb-[0.10em]">
             <span data-algo-word className="inline-block mr-[0.10em] will-change-transform">No</span>
             <span data-algo-word className="inline-block mr-[0.10em] will-change-transform">doomscroll.</span>
           </span>
-          <span data-algo-line className="block overflow-hidden">
+          <span data-algo-line className="block overflow-hidden pb-[0.18em] -mb-[0.10em]">
             <span data-algo-word className="inline-block mr-[0.10em] will-change-transform">Just</span>
             <span data-algo-word className="inline-block mr-[0.10em] will-change-transform text-primary">signal.</span>
           </span>

@@ -43,7 +43,7 @@ export function MidSubscribeCTA() {
               </div>
               <h3
                 data-mid-fade
-                className="font-serif italic tracking-[-0.03em] leading-[1] text-4xl md:text-5xl lg:text-6xl"
+                className="font-serif italic tracking-[-0.03em] leading-[1.05] text-4xl md:text-5xl lg:text-6xl pb-[0.05em]"
               >
                 Get the next 4 posts <br />
                 <span className="text-primary">delivered at 07:00</span>.

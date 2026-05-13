@@ -82,7 +82,7 @@ export function Subscribe() {
           className="font-serif italic tracking-[-0.04em] leading-[0.92] text-[18vw] sm:text-[14vw] md:text-[11vw] lg:text-[172px]"
         >
           {titleWords.map((w, i) => (
-            <span key={i} className="inline-block overflow-hidden align-baseline">
+            <span key={i} className="inline-block overflow-hidden align-baseline pb-[0.18em] -mb-[0.10em]">
               <span
                 data-cta-word
                 className={

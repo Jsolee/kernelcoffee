@@ -127,21 +127,21 @@ export function FeedHero() {
         {/* Headline */}
         <div className="mt-12 md:mt-16 max-w-[1180px]">
           <h1 className="font-serif italic tracking-[-0.04em] leading-[0.92] text-[15vw] sm:text-[12vw] md:text-[10vw] lg:text-[148px]">
-            <span className="block overflow-hidden">
+            <span className="block overflow-hidden pb-[0.18em] -mb-[0.10em]">
               {WORDS_LINE_1.map((w, i) => (
                 <span key={i} data-h-word className="inline-block mr-[0.10em] will-change-transform">
                   {w}
                 </span>
               ))}
             </span>
-            <span className="block overflow-hidden">
+            <span className="block overflow-hidden pb-[0.18em] -mb-[0.10em]">
               {WORDS_LINE_2.map((w, i) => (
                 <span key={i} data-h-word className="inline-block mr-[0.10em] will-change-transform">
                   {w}
                 </span>
               ))}
             </span>
-            <span className="block overflow-hidden">
+            <span className="block overflow-hidden pb-[0.18em] -mb-[0.10em]">
               {WORDS_LINE_3.map((w, i) => (
                 <span
                   key={i}

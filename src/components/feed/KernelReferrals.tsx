@@ -86,7 +86,7 @@ export function KernelReferrals() {
           <div className="lg:col-span-7">
             <h2
               data-ref-fade
-              className="font-serif italic tracking-[-0.03em] leading-[1] text-[10vw] md:text-[68px] lg:text-[96px]"
+              className="font-serif italic tracking-[-0.03em] leading-[1.05] text-[10vw] md:text-[68px] lg:text-[96px] pb-[0.05em]"
             >
               Bring a dev. <br />
               <span className="text-primary">Unlock the desk.</span>

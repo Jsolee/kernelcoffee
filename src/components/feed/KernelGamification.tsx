@@ -93,7 +93,7 @@ export function KernelGamification() {
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-16">
           <h2
             data-gam-fade
-            className="lg:col-span-7 font-serif italic tracking-[-0.03em] leading-[1] text-[10vw] md:text-[68px] lg:text-[96px]"
+            className="lg:col-span-7 font-serif italic tracking-[-0.03em] leading-[1.05] text-[10vw] md:text-[68px] lg:text-[96px] pb-[0.05em]"
           >
             Earn the room <br />
             <span className="text-primary">one ship at a time.</span>

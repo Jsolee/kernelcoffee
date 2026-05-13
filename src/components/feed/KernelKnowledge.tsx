@@ -84,7 +84,7 @@ export function KernelKnowledge() {
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-end mb-16">
           <h2
             data-talk-fade
-            className="lg:col-span-7 font-serif italic tracking-[-0.03em] leading-[1] text-[10vw] md:text-[68px] lg:text-[96px]"
+            className="lg:col-span-7 font-serif italic tracking-[-0.03em] leading-[1.05] text-[10vw] md:text-[68px] lg:text-[96px] pb-[0.05em]"
           >
             Talks the desk <br />
             <span className="text-primary">hosts on Tuesdays.</span>

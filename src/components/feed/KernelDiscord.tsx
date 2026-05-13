@@ -74,7 +74,7 @@ export function KernelDiscord() {
           <div className="lg:col-span-6">
             <h2
               data-disc-fade
-              className="font-serif italic tracking-[-0.03em] leading-[1] text-[10vw] md:text-[68px] lg:text-[88px]"
+              className="font-serif italic tracking-[-0.03em] leading-[1.05] text-[10vw] md:text-[68px] lg:text-[88px] pb-[0.05em]"
             >
               A room for devs <br />
               <span className="text-primary">who actually ship.</span>
