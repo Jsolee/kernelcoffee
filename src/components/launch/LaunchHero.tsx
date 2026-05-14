@@ -92,7 +92,7 @@ export function LaunchHero() {
         {/* Headline */}
         <div className="mt-14 md:mt-24 max-w-[1100px]">
           <h1 className="font-serif italic tracking-[-0.04em] leading-[0.92] text-[18vw] sm:text-[14vw] md:text-[11vw] lg:text-[172px]">
-            <span className="block overflow-hidden">
+            <span className="block overflow-hidden pb-[0.18em] -mb-[0.10em]">
               {WORDS_LINE_1.map((w, i) => (
                 <span
                   key={i}
@@ -103,7 +103,7 @@ export function LaunchHero() {
                 </span>
               ))}
             </span>
-            <span className="block overflow-hidden">
+            <span className="block overflow-hidden pb-[0.18em] -mb-[0.10em]">
               {WORDS_LINE_2.map((w, i) => (
                 <span
                   key={i}

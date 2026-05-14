@@ -15,7 +15,7 @@ const PROOF_POINTS = [
 
 function Line({ children }: { children: ReactNode }) {
   return (
-    <span data-manifesto-line className="block overflow-hidden">
+    <span data-manifesto-line className="block overflow-hidden pb-[0.18em] -mb-[0.10em]">
       <span data-word className="inline-block will-change-transform">
         {children}
       </span>
